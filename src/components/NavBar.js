@@ -3,6 +3,11 @@ import { Container, Nav, NavDropdown, Navbar } from "react-bootstrap";
 import "../styles/NavBar.scss";
 import PokeballIcon from "./PokeballIcon";
 
+/**
+ * NavBar will be used as part of the Layout for all pages. NavBar
+ * contains the Pokeball Icon (Home Page), National Pokedex link,
+ * and a Pokemon Origins dropdown for all Regional Pokedex links.
+ */
 const NavBar = () => {
   return (
     <Navbar expand="lg" className="bg-body-tertiary" sticky="top">
