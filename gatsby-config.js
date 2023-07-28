@@ -6,6 +6,7 @@ module.exports = {
     siteUrl: `https://www.yourdomain.tld`,
   },
   plugins: [
+    `gatsby-plugin-charts-css`,
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-pokeapi`,
