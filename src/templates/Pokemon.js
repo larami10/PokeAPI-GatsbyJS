@@ -23,6 +23,7 @@ const Pokemon = (props) => {
             <Row className="pokemon-image">
               <PokemonCard
                 pokemonImage={pageContext.pokemon.image}
+                pokemonName={pageContext.pokemon.name}
                 pokemonTypes={pageContext.pokemon.types}
               />
             </Row>

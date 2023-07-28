@@ -32,6 +32,7 @@ const StartersCarousel = ({ regionalStarters, region }) => {
               <Link to={`/${region}/${pokemon.name}`}>
                 <PokemonCard
                   pokemonImage={pokemon.image}
+                  pokemonName={pokemon.name}
                   pokemonTypes={pokemon.types}
                 />
               </Link>

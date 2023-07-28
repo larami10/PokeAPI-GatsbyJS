@@ -33,13 +33,13 @@ const PokemonCard = ({
     <Card
       className="pokemon-card"
       style={{
-        borderRadius: pokemonName ? "0.375rem" : "20px",
-        marginBottom: pokemonName ? "2em" : "0",
+        borderRadius: nationalDexNumber ? "0.375rem" : "20px",
+        marginBottom: nationalDexNumber ? "2em" : "0",
       }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div className="img" style={{ margin: pokemonName ? "1em" : "0" }}>
+      <div className="img" style={{ margin: nationalDexNumber ? "1em" : "0" }}>
         <Card.Img
           variant="top"
           src={pokemonImage}
@@ -53,7 +53,7 @@ const PokemonCard = ({
         />
       </div>
 
-      {pokemonName ? (
+      {nationalDexNumber ? (
         <>
           <p className="pokemon-card-nationalDexNumber">{nationalDexNumber}</p>
           <Card.Body>
