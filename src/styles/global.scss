@@ -21,6 +21,7 @@ html {
 
 a {
   text-decoration: none;
+  color: #313131;
 }
 
 body {
@@ -30,6 +31,11 @@ body {
   text-transform: none;
 }
 
-title {
-  text-transform: capitalize;
+.page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.content-wrap {
+  padding-bottom: 3.5em;
 }
