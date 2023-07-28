@@ -1,0 +1,12 @@
+.navbar-brand-container {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav-scroll {
+  max-height: 15em;
+}
+
+.navbar-collapse {
+  flex-grow: 0;
+}
