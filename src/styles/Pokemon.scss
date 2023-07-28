@@ -36,6 +36,12 @@
   text-transform: capitalize;
 }
 
+.base-stat-chart {
+  @media only screen and (max-width: 991px) {
+    margin: 0;
+  }
+}
+
 .head-title {
   text-transform: capitalize;
 }
