@@ -22,6 +22,10 @@
 
   .pokemon-types {
     margin: 0 auto;
+
+    div {
+      display: inline-block;
+    }
   }
 }
 
@@ -38,7 +42,7 @@
 
 .base-stat-chart {
   @media only screen and (max-width: 991px) {
-    margin: 0;
+    margin: 2em 0 0 0;
   }
 }
 

@@ -5,6 +5,7 @@ import Layout from "../components/Layout";
 import PokemonCard from "../components/PokemonCard";
 import PokemonTypeIcon from "../components/PokemonTypeIcon";
 import "../styles/Pokemon.scss";
+import { Seo } from "../components/Seo";
 
 /**
  * This is a template page that is used by gatsby-node.js to
@@ -30,10 +31,12 @@ const Pokemon = (props) => {
             <Row className="pokemon-types">
               <h6>
                 Pokemon Type:{" "}
-                <PokemonTypeIcon type={pageContext.pokemon.types[0]} />{" "}
-                {pageContext.pokemon.types[1] ? (
-                  <PokemonTypeIcon type={pageContext.pokemon.types[1]} />
-                ) : null}
+                <div>
+                  <PokemonTypeIcon type={pageContext.pokemon.types[0]} />{" "}
+                  {pageContext.pokemon.types[1] ? (
+                    <PokemonTypeIcon type={pageContext.pokemon.types[1]} />
+                  ) : null}
+                </div>
               </h6>
             </Row>
           </Col>
@@ -51,10 +54,8 @@ const Pokemon = (props) => {
 export default Pokemon;
 
 export const Head = (props) => {
-  const head = props.pageContext.pokemon.name;
-  return (
-    <title className="head-title">
-      {head.charAt(0).toUpperCase() + head.slice(1)}
-    </title>
-  );
+  let head = props.pageContext.name;
+  head = head.charAt(0).toUpperCase() + head.slice(1);
+
+  return <Seo title={head} description={head} />;
 };

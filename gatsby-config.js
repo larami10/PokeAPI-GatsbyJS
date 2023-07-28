@@ -13,6 +13,13 @@ module.exports = {
     `gatsby-plugin-charts-css`,
     `gatsby-plugin-sass`,
     {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://pokeapigatsbyjs.gatsbyjs.io/",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
+    {
       resolve: `gatsby-source-pokeapi`,
       options: {
         nbOfPokemons: 100000,

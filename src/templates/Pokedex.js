@@ -5,6 +5,7 @@ import Layout from "../components/Layout";
 import Grid from "../components/Grid";
 import { regionalPokedexData } from "../constants/RegionalPokedexData";
 import { regions } from "../constants/Regions";
+import { Seo } from "../components/Seo";
 
 /**
  * Pokedex is a template component that is used by gatsby-node.js to create
@@ -55,10 +56,8 @@ const Pokedex = (props) => {
 export default Pokedex;
 
 export const Head = (props) => {
-  const head = props.pageContext.title;
-  return (
-    <title className="head-title">
-      {head.charAt(0).toUpperCase() + head.slice(1)} Pokedex
-    </title>
-  );
+  let head = props.pageContext.title;
+  head = head.charAt(0).toUpperCase() + head.slice(1) + "Pokedex";
+
+  return <Seo title={head} description={head} />;
 };

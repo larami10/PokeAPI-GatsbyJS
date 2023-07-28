@@ -1,6 +1,7 @@
 import * as React from "react";
 import Layout from "../components/Layout";
 import CarouselHome from "../components/CarouselHome";
+import { Seo } from "../components/Seo";
 
 /**
  * Index page will display the Pokemon Starters in Carousels
@@ -15,4 +16,6 @@ const IndexPage = () => {
 
 export default IndexPage;
 
-export const Head = () => <title>Home Page</title>;
+export const Head = () => (
+  <Seo title="Home Page" description="Starter Pokemon" />
+);
