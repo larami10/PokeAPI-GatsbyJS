@@ -9,12 +9,17 @@ When the world of Pokemon first came out, there were 151 Pokemon. That total now
 3. Reusable components.
 4. Every page will display a Navbar at the top of the page with:
    1. a navbar brand link to go back to home.
+      1. The navbar brand link includes a Pokeball icon that will blink at any page start
    2. a nav link to go to the National Pokedex page.
    3. a dropdown with 10 nav links to view a selected region's Pokedex page.
       1. This dropdown becomes scrollable when the hamburger icon is displayed when the screen shrinks in size.
 5. The Home Page will show 9 Carousels showing 9 regions and their 3 respective starter Pokemon.
    1. > **_NOTE:_** There are 10 regions, but Hisui has starter Pokemon that were part of other regions and thus have decided to not be shown here.
+   2. Controlling the carousels:
+      1. On a PC, the user can only click
+      2. On mobile devices, the user can click the controls or use the swipe functionality
 6. On hover, all Pokemon images will scale up and glow (the glow color depends on the Pokemon's first typing)
+   1. This feature is only available for PCs, the Pokemon may still scale up on press and hold on mobile devices
 7. The Pokedex Pages:
    1. All regional Pokedex pages will display only their respective Pokemon in a grid.
    2. The National Pokedex page will display all 1,010 Pokemon in a grid
@@ -24,8 +29,12 @@ When the world of Pokemon first came out, there were 151 Pokemon. That total now
       1. The image will still glow on hover but the mouse icon is no longer a pointer
    2. A [chart-css](https://www.gatsbyjs.com/plugins/gatsby-plugin-charts-css/) bar chart displaying the Pokemon's base stats
       1. Due to some stats going over 100 points, the total percentage will dynamically be based on the selected Pokemon's highest stat
-      2. When hovering over a stat, the hovered stat will be highlighted
+      2. A hovered stat will be highlighted:
+      3. when hovering over a stat on a computer.
+      4. when clicking on a stat on a mobile device
 
 > **_NOTE:_** This project does not include regional variants, shiny "special" variants, Mega Pokemon, etc.
 
 ## How to use the Project
+
+This project is being hosted and deployed through Gatsby Cloud [PokeAPI-GatsbyJS](https://pokeapigatsbyjs.gatsbyjs.io/)
