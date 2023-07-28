@@ -1,0 +1,19 @@
+.carousel-grid {
+  padding: 3em 4em;
+  background-color: #ffffff;
+
+  h2 {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+
+  @media only screen and (min-width: 768px) {
+    padding: 2em 2em;
+  }
+}
+
+.carousel-row {
+  display: flex;
+  justify-content: center;
+}
