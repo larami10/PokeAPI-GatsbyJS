@@ -1,9 +1,13 @@
+const FilterWarningsPlugin = require("webpack-filter-warnings-plugin");
+
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://www.yourdomain.tld`,
+    title: `PokeAPI-GatsbyJS`,
+    siteUrl: `https://pokeapigatsbyjs.gatsbyjs.io/`,
+    description: `Pokemon web database using PokeAPI and GatsbyJS`,
   },
   plugins: [
     `gatsby-plugin-charts-css`,
@@ -15,4 +19,15 @@ module.exports = {
       },
     },
   ],
+};
+
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    plugins: [
+      new FilterWarningsPlugin({
+        exclude:
+          /mini-css-extract-plugin[^]*Conflicting order. Following module has been added:/,
+      }),
+    ],
+  });
 };
