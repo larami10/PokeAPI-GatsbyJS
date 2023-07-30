@@ -10,8 +10,8 @@ module.exports = {
     description: `Pokemon web database using PokeAPI and GatsbyJS`,
   },
   plugins: [
-    `gatsby-plugin-charts-css`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-charts-css`,
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
@@ -26,10 +26,6 @@ module.exports = {
       },
     },
   ],
-  flags: {
-    DEV_SSR: true,
-    PARALLEL_SOURCING: true,
-  },
 };
 
 exports.onCreateWebpackConfig = ({ actions }) => {
