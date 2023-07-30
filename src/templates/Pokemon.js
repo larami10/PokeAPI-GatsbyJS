@@ -54,7 +54,7 @@ const Pokemon = (props) => {
 export default Pokemon;
 
 export const Head = (props) => {
-  let head = props.pageContext.name;
+  let head = props.pageContext.pokemon.name;
   head = head.charAt(0).toUpperCase() + head.slice(1);
 
   return <Seo title={head} description={head} />;

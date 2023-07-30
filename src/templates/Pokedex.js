@@ -57,7 +57,7 @@ export default Pokedex;
 
 export const Head = (props) => {
   let head = props.pageContext.title;
-  head = head.charAt(0).toUpperCase() + head.slice(1) + "Pokedex";
+  head = head.charAt(0).toUpperCase() + head.slice(1) + " Pokedex";
 
   return <Seo title={head} description={head} />;
 };
