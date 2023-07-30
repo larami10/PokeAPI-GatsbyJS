@@ -28,6 +28,7 @@ module.exports = {
   ],
   flags: {
     DEV_SSR: true,
+    PARALLEL_SOURCING: true,
   },
 };
 
