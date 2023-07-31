@@ -1,6 +1,7 @@
 #base-stats caption {
   text-align: center;
   margin-bottom: 1em;
+  color: #474747;
 }
 
 #base-stats tr {
@@ -8,12 +9,12 @@
 }
 
 #base-stats tr:hover {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(#474747, 0.2);
 }
 
 #base-stats tr:hover th {
-  background-color: rgba(0, 0, 0, 0.4);
-  color: #fff;
+  background-color: rgba(#474747, 0.4);
+  color: #f2f2f2;
 }
 
 #base-stats tbody td {

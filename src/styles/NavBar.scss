@@ -1,6 +1,7 @@
 .navbar-brand-container {
   display: flex;
   align-items: center;
+  color: #474747;
 }
 
 .navbar-nav-scroll {
@@ -9,4 +10,11 @@
 
 .navbar-collapse {
   flex-grow: 0;
+}
+
+.nav-link,
+.nav-item,
+.navbar-nav .nav-link.show,
+.dropdown-item {
+  color: #474747;
 }

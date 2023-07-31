@@ -22,7 +22,6 @@ const StartersCarousel = ({ regionalStarters, region }) => {
       <Carousel
         activeIndex={index}
         onSelect={handleSelect}
-        data-bs-theme="dark"
         interval={null}
         className="carousel"
       >
