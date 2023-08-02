@@ -10,6 +10,15 @@ module.exports = {
     description: `Pokemon web database using PokeAPI and GatsbyJS`,
   },
   plugins: [
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://pokeapigatsbyjs.gatsbyjs.io/",
+        sitemap: "https://pokeapigatsbyjs.gatsbyjs.io/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
     {
       resolve: `gatsby-omni-font-loader`,
       options: {
@@ -28,16 +37,6 @@ module.exports = {
     },
     `gatsby-plugin-sass`,
     `gatsby-plugin-charts-css`,
-    `gatsby-plugin-sitemap`,
-    {
-      resolve: "gatsby-plugin-robots-txt",
-      options: {
-        host: "https://pokeapigatsbyjs.gatsbyjs.io/",
-        sitemap: "https://pokeapigatsbyjs.gatsbyjs.io/sitemap.xml",
-        policy: [{ userAgent: "*", allow: "/" }],
-      },
-    },
-
     {
       resolve: `gatsby-source-pokeapi`,
       options: {
