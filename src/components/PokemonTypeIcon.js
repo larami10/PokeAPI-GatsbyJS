@@ -9,7 +9,10 @@ const PokemonTypeIcon = ({ type }) => {
       <Button
         className="pokemon-type-icon"
         size="sm"
-        style={{ background: types[type] }}
+        style={{
+          background: types[type],
+          color: types[type] === types["poison"] ? "#f2f2f2" : "#212121",
+        }}
       >
         {type}
       </Button>

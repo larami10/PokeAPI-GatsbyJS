@@ -13,7 +13,7 @@ export const types = {
   ground: "#E2BF65",
   ice: "#96D9D6",
   normal: "#A8A77A",
-  poison: "#A33EA1",
+  poison: "#7E307C",
   psychic: "#F95587",
   rock: "#B6A136",
   steel: "#B7B7CE",
