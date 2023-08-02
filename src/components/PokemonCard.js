@@ -16,7 +16,6 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
  */
 const PokemonCard = ({
   nationalDexNumber,
-  pokemonImage,
   pokemonName,
   pokemonTypes,
   pokemonLocal,
@@ -42,17 +41,6 @@ const PokemonCard = ({
       onMouseLeave={handleMouseLeave}
     >
       <div className="img" style={{ margin: nationalDexNumber ? "1em" : "0" }}>
-        {/* <Card.Img
-          variant="top"
-          src={pokemonImage}
-          className="pokemon-card-image"
-          style={{
-            filter: isHover
-              ? `drop-shadow(0 0 1em ${types[pokemonTypes[0]]})`
-              : "none",
-          }}
-          alt={pokemonName}
-        /> */}
         <GatsbyImage
           image={getImage(pokemonLocal)}
           alt={pokemonName}
