@@ -30,9 +30,9 @@ const StartersCarousel = ({ regionalStarters, region }) => {
             <div className="carousel-image">
               <Link to={`/${region}/${pokemon.name}`}>
                 <PokemonCard
-                  pokemonImage={pokemon.image}
                   pokemonName={pokemon.name}
                   pokemonTypes={pokemon.types}
+                  pokemonLocal={pokemon.localImage}
                 />
               </Link>
             </div>

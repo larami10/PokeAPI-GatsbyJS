@@ -1,11 +1,11 @@
 import * as React from "react";
-import { graphql, useStaticQuery } from "gatsby";
 import { Container } from "react-bootstrap";
 import Layout from "../components/Layout";
 import Grid from "../components/Grid";
 import { regionalPokedexData } from "../constants/RegionalPokedexData";
 import { regions } from "../constants/Regions";
 import { Seo } from "../components/Seo";
+import { PokeAPIQuery } from "../constants/PokeAPIQuery";
 
 /**
  * Pokedex is a template component that is used by gatsby-node.js to create
@@ -16,27 +16,9 @@ const Pokedex = (props) => {
   const region = pageContext?.id ?? 0;
 
   // query to get allPokemon data from PokeAPI
-  const data = useStaticQuery(graphql`
-    query {
-      allPokemon {
-        nodes {
-          name
-          stats {
-            hp
-            attack
-            defense
-            special_attack
-            special_defense
-            speed
-          }
-          image
-          types
-        }
-      }
-    }
-  `);
+  const query = PokeAPIQuery();
 
-  const nationalPokedexData = data.allPokemon.nodes.map((pokemon, index) => ({
+  const nationalPokedexData = query.map((pokemon, index) => ({
     ...pokemon,
     nationalDexNumber: index + 1,
     region: regions(index),

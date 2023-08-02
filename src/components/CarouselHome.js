@@ -52,8 +52,20 @@ const CarouselHome = () => {
       ) {
         nodes {
           name
-          image
           types
+          localImage {
+            childImageSharp {
+              gatsbyImageData(
+                webpOptions: { quality: 100 }
+                quality: 100
+                formats: WEBP
+                layout: CONSTRAINED
+                height: 150
+                width: 150
+                placeholder: BLURRED
+              )
+            }
+          }
         }
       }
     }

@@ -25,6 +25,22 @@ module.exports = {
         nbOfPokemons: 100000,
       },
     },
+    {
+      resolve: `gatsby-plugin-remote-images`,
+      options: {
+        nodeType: "POKEMON",
+        imagePath: "image",
+        silent: true,
+        skipUndefinedUrls: true,
+        prepareUrl: (url) => {
+          if (!url || url === "N/A") return undefined;
+          return url;
+        },
+      },
+    },
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
   ],
 };
 

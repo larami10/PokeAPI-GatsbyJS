@@ -3,6 +3,7 @@ import { Card } from "react-bootstrap";
 import { types } from "../constants/TypeColors";
 import "../styles/PokemonCard.scss";
 import PokemonTypeIcon from "./PokemonTypeIcon";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 /**
  * PokemonCard is a reusable custom component that will
@@ -18,6 +19,7 @@ const PokemonCard = ({
   pokemonImage,
   pokemonName,
   pokemonTypes,
+  pokemonLocal,
 }) => {
   const [isHover, setIsHover] = React.useState(false);
 
@@ -40,7 +42,7 @@ const PokemonCard = ({
       onMouseLeave={handleMouseLeave}
     >
       <div className="img" style={{ margin: nationalDexNumber ? "1em" : "0" }}>
-        <Card.Img
+        {/* <Card.Img
           variant="top"
           src={pokemonImage}
           className="pokemon-card-image"
@@ -50,6 +52,16 @@ const PokemonCard = ({
               : "none",
           }}
           alt={pokemonName}
+        /> */}
+        <GatsbyImage
+          image={getImage(pokemonLocal)}
+          alt={pokemonName}
+          className="pokemon-card-image"
+          style={{
+            filter: isHover
+              ? `drop-shadow(0 0 1em ${types[pokemonTypes[0]]})`
+              : "none",
+          }}
         />
       </div>
 

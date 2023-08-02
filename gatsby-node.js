@@ -57,16 +57,6 @@ exports.createPages = async ({ graphql, actions }) => {
       allPokemon {
         nodes {
           name
-          image
-          stats {
-            attack
-            defense
-            hp
-            special_attack
-            special_defense
-            speed
-          }
-          types
         }
       }
     }
@@ -117,7 +107,7 @@ exports.createPages = async ({ graphql, actions }) => {
     createPage({
       path: `/${pokemon.region}/${pokemon.name}`,
       component: path.resolve(`src/templates/Pokemon.js`),
-      context: { id: pokemon.id, pokemon: pokemon },
+      context: { id: pokemon.id, name: pokemon.name },
     });
   });
 };

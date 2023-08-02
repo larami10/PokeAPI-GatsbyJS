@@ -27,9 +27,9 @@ const Grid = ({ pokemonData }) => {
           <Link key={index} to={`/${node.region}/${node.name}`}>
             <PokemonCard
               nationalDexNumber={generatePokemonIndex(node.nationalDexNumber)}
-              pokemonImage={node.image}
               pokemonName={node.name}
               pokemonTypes={node.types}
+              pokemonLocal={node.localImage}
             />
           </Link>
         ))}
