@@ -20,7 +20,7 @@ const NavBar = () => {
         <Navbar.Collapse id="navbarScroll">
           <Nav className="me-auto" navbarScroll>
             <Nav.Link href="/national">National Pokedex</Nav.Link>
-            <NavDropdown title="Pokemon Origins" id="navbarScrollingDropdown">
+            <NavDropdown title="Pokemon Regions" id="navbarScrollingDropdown">
               <NavDropdown.Item href="/kanto">Kanto</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="/johto">Johto</NavDropdown.Item>
