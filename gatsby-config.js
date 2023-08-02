@@ -10,15 +10,34 @@ module.exports = {
     description: `Pokemon web database using PokeAPI and GatsbyJS`,
   },
   plugins: [
+    {
+      resolve: `gatsby-omni-font-loader`,
+      options: {
+        enableListener: true,
+        preconnect: [
+          `https://fonts.googleapis.com`,
+          `https://fonts.gstatic.com`,
+        ],
+        web: [
+          {
+            name: `Audiowide`,
+            file: `https://fonts.googleapis.com/css2?family=Audiowide:wght@400;600;700&display=swap`,
+          },
+        ],
+      },
+    },
     `gatsby-plugin-sass`,
     `gatsby-plugin-charts-css`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
         host: "https://pokeapigatsbyjs.gatsbyjs.io/",
+        sitemap: "https://pokeapigatsbyjs.gatsbyjs.io/sitemap.xml",
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
+
     {
       resolve: `gatsby-source-pokeapi`,
       options: {
