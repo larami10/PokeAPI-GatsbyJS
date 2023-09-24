@@ -10,6 +10,7 @@ module.exports = {
     description: `Pokemon web database using PokeAPI and GatsbyJS`,
   },
   plugins: [
+    `gatsby-plugin-netlify`,
     `gatsby-plugin-sitemap`,
     {
       resolve: "gatsby-plugin-robots-txt",
