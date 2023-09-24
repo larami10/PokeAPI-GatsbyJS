@@ -41,4 +41,4 @@ When the world of Pokemon first came out, there were 151 Pokemon. That total now
 
 ## How to use the Project
 
-This project is being hosted and deployed through Gatsby Cloud [PokeAPI-GatsbyJS](https://pokeapigatsbyjs.gatsbyjs.io/)
+This project was being hosted and deployed through Gatsby Cloud but now being hosted on Netlify [PokeAPI-GatsbyJS](https://pokeapigatsbyjs.netlify.app/)
